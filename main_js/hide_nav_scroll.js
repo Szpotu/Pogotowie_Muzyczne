@@ -1,0 +1,1 @@
+let actualPosition = window.pageYOffset;
