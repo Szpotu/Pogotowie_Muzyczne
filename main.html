@@ -27,7 +27,7 @@
             <div id='site-1' class='background-images'></div>
                 <div id='logo'>
                     <noscript>Wygląda na to, że Twoja przeglądarka blokuje Javascript. Niektóre elementy strony mogą być niedostępne.</noscript>
-                    <img src='mian_css/logo1.png' alt='Pogotowie w akcji'>
+                    <img src='mian_css/logo1.png' alt='Logo Pogotowie Muzyczne'>
             </div>
             
             <div id='greetings-text'>
@@ -41,17 +41,23 @@
         </main>
             
             <nav id= 'nav' class= 'basic-nav'>
-                <a id='navButton1' class='navBtn' href='#site-1' accesskey="q "><i class='icon-home'></i></a>
-                <a id='navButton2' class='navBtn' href='#site-2'><i class='icon-help'></i></a>
-                <a id='navButton3' class='navBtn' href='#site-3'><i class = 'icon-picture'></i></a>
-                <a id='navButton4' class='navBtn' href='#site-4'><i class = 'icon-note-beamed'></i></a>
-                <a id='navButton5' class='navBtn' href='#site-5'><i class = 'icon-mail'></i></a>
-                <div id= 'language-shifter'>
+                
+             <ul>   
+                <li><a class='navBtn' href='#site-1' accesskey="q "><i class='icon-home'></i></a></li>
+                <li><a class='navBtn' href='#site-2'><i class='icon-help'></i></a></li>
+                <li><a class='navBtn' href='#site-3'><i class = 'icon-picture'></i></a></li>
+                <li><a class='navBtn' href='#site-4'><i class = 'icon-note-beamed'></i></a></li>
+                <li><a class='navBtn' href='#site-5'><i class = 'icon-mail'></i></a></li>
+            </ul>
+                
+             <div id= 'language-shifter'>
                     <div id = 'language-polish' class='lang-button'>
-                        <button type='submit' content='english'>Polski</button>
+                        <label for='polish-shift' name='polish-shift'></label>
+                        <button tabindex= '1' type='submit' id='polish-shift' content='polish'>Polski</button>
                     </div>
                     <div id = 'language-english' class='lang-button'>
-                        <button type='submit' content='polish'>English</button>
+                        <label for='english-shift' name='english-shift' content='english-shift'></label>
+                        <button tabindex='2' id ='english-shift' type='submit' content='polish'>English</button>
                     </div>
                 </div>
             </nav>
