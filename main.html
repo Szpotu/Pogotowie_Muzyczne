@@ -21,55 +21,63 @@
 <body>
     <div class='wrapper'>
         <div id = 'findMe-bar'>@</div>
-        <header>
-        <main>
-            
+        
             <div id='site-1' class='background-images'></div>
+            <header>    
                 <div id='logo'>
                     <noscript>Wygląda na to, że Twoja przeglądarka blokuje Javascript. Niektóre elementy strony mogą być niedostępne.</noscript>
                     <img src='mian_css/logo1.png' alt='Logo Pogotowie Muzyczne'>
-            </div>
+                </div>
+                    <nav id= 'nav' class= 'basic-nav'>
+                        <ul>   
+                            <li><a class='navBtn' href='#site-1'>Home</a></li>
+                            <li><a class='navBtn' href='#site-2'>AboutUs</a></li>
+                            <li><a class='navBtn' href='#site-3'>WatchUs</a></li>
+                            <li><a class='navBtn' href='#site-4'>ListenUs</a></li>
+                            <li><a class='navBtn' href='#site-5'>ContactMe</a></li>
+                            <div id='hamburger'>
+                                <div class='burger-border'></div>
+                                <div class='burger-border'></div>
+                                <div class='burger-border'></div>
+                            </div>
+                            <ul>
+                    </nav>
+            </header>
+        <div id = 'language-polish' class='lang-button'>
+            <label for='polish-shift' name='polish-shift'></label>
+            <button tabindex= '1' type='submit' id='polish-shift' content='polish'>Polski</button>
+        </div>
+        <div id = 'language-english' class='lang-button'>
+            <label for='english-shift' name='english-shift' content='english-shift'></label>
+            <button tabindex='2' id ='english-shift' type='submit' content='polish'>English</button>
+        </div>
             
-            <div id='greetings-text'>
-                <h1>Slogan?<br><strong>Slogan</strong><br><br><h3 title='Zobacz, kim jesteśmy ;)'>Dowiedz się czegoś <a href='#site-2'>o nas</a>, nie pożałujesz !</h3></h1>
-                
+        <div id='greetings-text'>
+            <h1>Lorem ipsum dolor sit amet, consectetur.</h1><h3 title='Zobacz, kim jesteśmy ;)'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a arcu sodales, suscipit est a, gravida enim</h3><a href='#site-2'>Click to get more</a>
         </div>
         
-            <div id= 'separate-play'>
-                <h1>Kogo zobaczycie na scenie?</h1> 
-            </div>
+            
         </main>
             
-            <nav id= 'nav' class= 'basic-nav'>
+          
                 
-             <ul>   
-                <li><a class='navBtn' href='#site-1' accesskey="q "><i class='icon-home'></i></a></li>
-                <li><a class='navBtn' href='#site-2'><i class='icon-help'></i></a></li>
-                <li><a class='navBtn' href='#site-3'><i class = 'icon-picture'></i></a></li>
-                <li><a class='navBtn' href='#site-4'><i class = 'icon-note-beamed'></i></a></li>
-                <li><a class='navBtn' href='#site-5'><i class = 'icon-mail'></i></a></li>
-            </ul>
-                
-             <div id= 'language-shifter'>
-                    <div id = 'language-polish' class='lang-button'>
-                        <label for='polish-shift' name='polish-shift'></label>
-                        <button tabindex= '1' type='submit' id='polish-shift' content='polish'>Polski</button>
-                    </div>
-                    <div id = 'language-english' class='lang-button'>
-                        <label for='english-shift' name='english-shift' content='english-shift'></label>
-                        <button tabindex='2' id ='english-shift' type='submit' content='polish'>English</button>
-                    </div>
-                </div>
-            </nav>
+                <!---->
+                 
             
         </header>
-        <!--Pasek nawigujący do zespołu w portalach społecznościowych-->
+        <!--Bar navigates to social media sources>
         
         <!--AboutMe Site-->
         <section>
-            <div id= 'site-2' class = 'background-images'></div>
             <h1>Kim jesteśmy?</h1>
-            <div class ='personal-description'></div>
+            <div id= 'site-2' class = 'background-images'>
+            <div class='advert-window'></div>
+                <div class='personal-description' id='person1'></div>
+                <div class='personal-description' id='person2'></div>
+                <div class='advert-window'></div>
+            </div>
+            
+            
         </section>
         <section>
             <div id='site-3' class='background-images'></div>

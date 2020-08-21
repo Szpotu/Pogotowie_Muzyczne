@@ -1,350 +1,286 @@
-/* Zdefiniuj w roocie kolory*/
-
-body,
-html {
-    font-size: 16px;
-    margin: 0;
-    height: 100%;
-    scroll-behavior: smooth;
-    width: 100%;
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
-}
-
- :root {
-    --main-backg-color: rgba(100, 3, 255, 0.7);
-    --complem-color: rgba(3, 255, 255, 0.8);
-    --triad-color: rgba(15, 2, 13, 0.5);
-    --menu-shadower-color: linear-gradient(to top, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-}
-
-.wrapper {
-    height: 100vh;
-}
-
-
-/* Background-images set*/
-
-.background-images {
-    padding: 10px;
-    height: 100vh;
-    max-width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    filter: blur(10px);
-    scroll-snap-align: start;
-}
-
-
-/* *ID */
-
-#site-1 {
-    background-image: url(1-page.jpg);
-}
-
-#site-2 {
-    background-image: url(2-page.jpg);
-    filter: none;
-}
-
-#site-3 {
-    background-image: url(3-page.jpg);
-}
-
-#site-4 {
-    background-image: url(4-page.jpg);
-}
-
-#site-5 {
-    background-image: url(5-page.jpg);
-}
-
-
-/* =================FIRST SITE============================================*/
-
-#logo {
-    position: absolute;
-    top: 0.5em;
-    z-index: 2;
-    transition: all 0.4s 0.4s ease-in-out;
-}
-
-#logo img {
-    position: relative;
-    left: 2em;
-    width: 6em;
-    display: flex;
-    opacity: 0.8;
-}
-
-
-/* If is smaller than 675px */
-
-@media (max-width: 675px) {
-    #logo img {
-        top: 9.5em;
-        width: 20%;
-        left: 0;
-    }
-    .navBtn {
-        border: 1px solid #221152;
-        font-size: 0.7em;
-        top: 1em;
-    }
-    #language-polish,
-    #language-english {
-        position: relative;
-        display: flex;
-        top: 3em;
-        right: 2em;
-    }
-}
-
-.basic-nav {
-    animation: show-nav 0.2s 0.2s ease-in-out forwards;
-}
-
-.scrolled-nav {
-    animation: shrink-nav 0.4s ease-out forwards;
-}
-
-
-/* ===============
-     Menu buttons
-   ============= */
-
-nav ul {
-    border: 1px solid white;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    max-width: 50%;
-    list-style-type: none;
-    max-width: 100%;
-    flex-wrap: wrap;
-}
-
-.navBtn {
-    display: flex;
-    position: relative;
-    margin-right: 2em;
-    padding: 1em;
-    color: var(--complem-color);
-    transition: 0.5s 0s ease-in-out;
-    background-color: var(--triad-color);
-    box-shadow: 4px 2px 25px 4px black;
-}
-
-.navBtn:hover,
-.navBtn:focus {
-    transform: scale(1.2);
-    padding: 0.6em;
-    transition: 0.3s 0s ease-in-out;
-    border-radius: 10px;
-}
-
-.shrinkedNavBtn {
-    animation: shrink-nav-button 2s ease-in-out forwards;
-}
-
-
-/*========================MAIN CONTENT=======================*/
-
-#greetings-text {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    left: 25%;
-    align-items: center;
-    top: 30%;
-    width: 50%;
-    height: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-box-shadow: 4px 7px 28px 14px rgba(0, 0, 0, 0.68);
-    -moz-box-shadow: 4px 7px 28px 14px rgba(0, 0, 0, 0.68);
-    box-shadow: 4px 2px 25px 4px black;
-}
-
-#greetings-text a {
-    text-decoration: none;
-    padding: 2px;
-    text-align: center;
-}
-
-#separate-play {
-    width: 100%;
-    height: 15%;
-    background-color: var(--triad-color);
-    z-index: 1;
-    position: absolute;
-    bottom: auto;
-    box-shadow: 11px 1px 10px 0 var(--main-backg-color);
-}
-
-
-/*  
-    ===============
-       findMeBar
-    ===============
-*/
-
-#findMe-bar {
-    z-index: 2;
-    position: fixed;
-    height: 10%;
-    top: 40%;
-    width: 2%;
-    background-color: var(--triad-color);
-    display: flex;
-    color: white;
-    background-color: var(--triad-color);
-    box-shadow: 4px 2px 25px 4px black;
-}
-
-
-/*
-    =============
-      Lang shift
-    =============
-*/
-
-#language-shifter {
-    top: 3em;
-    position: absolute;
-    width: 7%;
-    height: 10%;
-    display: block;
-    right: 5%;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#language-polish,
-#language-english {
-    width: 100%;
-    float: left;
-    display: flex;
-    flex-direction: column;
-}
-
-.lang-button>button {
-    width: 5em;
-    margin-left: 3%;
-    background-color: var(--triad-color);
-    box-shadow: 4px 2px 25px 4px black;
-    color: var(--complem-color);
-    font-weight: 900;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: 0.3s 0.1s ease-in-out;
-}
-
-#language-english>button:hover {
-    background-color: red;
-    color: blue;
-    transform: scale(1.1);
-}
-
-#language-polish>button:hover {
-    background-color: white;
-    color: red;
-    transform: scale(1.1);
-}
-
-
-/* ================
-    Keyframes-List
-    ===============
-*/
-
-@keyframes show-nav {
-    0% {
-        display: flex;
-        position: fixed;
-        height: 7em;
-        width: 100%;
-        background-color: var(--main-backg-color);
-        opacity: 1;
-        text-align: center;
-        font-weight: 600;
-        top: -5em;
-        opacity: 0;
-        box-shadow: 46px -9px 8px 14px rgba(0, 0, 0, 0.22);
-    }
-    100% {
-        border: solid var(--complem-color)1px;
-        display: flex;
-        position: fixed;
-        top: 0;
-        height: 9rem;
-        width: 100%;
-        align-items: center;
-        background-color: var(--main-backg-color);
-        opacity: 1;
-        font-weight: 600;
-    }
-}
-
-@keyframes shrink-nav {
-    0% {
-        display: inline-block;
-        position: fixed;
-        height: 7em;
-        top: 0;
-        right: 0;
-        width: 100%;
-        background-color: var(--main-backg-color);
-        opacity: 1;
-        text-align: center;
-        font-weight: 600;
-        transition: All 2s 2s ease-in-out;
-        opacity: 0.5;
-        box-shadow: 46px -9px 8px 14px rgba(0, 0, 0, 0.22);
-    }
-    100% {
-        z-index: 2;
-        display: inline-block;
-        transition: All 0.5s 0.5s ease-in-out;
-        position: fixed;
-        height: 50%;
-        right: 0;
-        top: 11em;
-        width: 3%;
-        background-color: var(--complem-color);
-        opacity: 1;
-        text-align: right;
-        font-weight: 600;
-        border-radius: 10px;
-        border: solid 6px var(--main-backg-color);
-        box-shadow: -1px -1px 27px 3px rgba(255, 255, 255, 1);
-    }
-}
-
-@keyframes shrink-nav-button {
-    0% {
-        text-transform: uppercase;
-        font-family: 'Caveat', cursive;
-        margin-right: 10px;
-        position: relative;
-        color: #eee;
-        border-spacing: 20px 50px;
-    }
-    85% {
-        opacity: 0;
-    }
-    100% {
-        position: relative;
-        background-color: var(--main-backg-color);
-        text-transform: uppercase;
-        font-family: 'Caveat', cursive;
-        border-radius: 40%;
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.9);
-        opacity: 1;
-    }
-}
+        /* Zdefiniuj w roocie kolory*/
+        
+        body,
+        html {
+            font-size: 16px;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        
+         :root {
+            --main-backg-color: rgba(100, 3, 255, 0.7);
+            --main-backg-fill: rgba(100, 3, 255, 1);
+            --complem-color: rgba(3, 255, 255, 0.8);
+            --triad-color: rgba(15, 2, 13, 0.5);
+            --menu-shadower-color: linear-gradient(to top, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+        }
+        
+        .wrapper {
+            height: 100vh;
+        }
+        /* Background-images set*/
+        
+        .background-images {
+            padding: 10px;
+            height: 100vh;
+            max-width: 100%;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            filter: blur(10px);
+        }
+        /* *ID */
+        
+        #site-1 {
+            background-image: url(1-page.jpg);
+        }
+        
+        #site-2 {
+            background-image: url(2-page.jpg);
+            filter: none;
+        }
+        
+        #site-3 {
+            background-image: url(3-page.jpg);
+        }
+        
+        #site-4 {
+            background-image: url(4-page.jpg);
+        }
+        
+        #site-5 {
+            background-image: url(5-page.jpg);
+        }
+        /* =================FIRST SITE============================================*/
+        
+        #logo {
+            position: absolute;
+            top: 0.5em;
+            z-index: 2;
+            transition: all 0.4s 0.4s ease-in-out;
+        }
+        
+        #logo img {
+            position: relative;
+            left: 1em;
+            width: 5%;
+            ;
+            opacity: 0.8;
+        }
+        /* If is smaller than 675px */
+        
+        @media (max-width: 675px) {
+            #logo img {
+                top: 0;
+                width: 10%;
+                left: 0.5em;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .navBtn {
+                border: 1px solid #221152;
+                font-size: 0.7em;
+                top: 1em;
+            }
+            #language-polish,
+            #language-english {
+                max-width: 100%;
+                position: relative;
+                transform: scale(0.7);
+                left: 1.5em;
+                bottom: 0.5em;
+            }
+            #greetings-text h1,
+            #greetings-text h3,
+            #greetings-text a {
+                font-size: 1rem;
+            }
+        }
+        
+        .basic-nav {
+            display: inline-block;
+            position: fixed;
+            top: 0;
+            height: 15rem;
+            width: 100%;
+            align-items: center;
+            background-color: var(--main-backg-color);
+            opacity: 1;
+            font-weight: 600;
+        }
+        
+        .scrolled-nav {
+            position: fixed;
+            ;
+            display: inline-block;
+            top: 0;
+            right: 0;
+            background-color: var(--triad-color);
+            width: 20%;
+        }
+        
+        .hamburger {
+            display: flex;
+        }
+        /* ===============
+         Menu buttons
+       ============= */
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            max-width: 50%;
+            list-style-type: none;
+            max-width: 100%;
+            flex-wrap: wrap;
+        }
+        
+        .navBtn {
+            display: flex;
+            position: relative;
+            margin-right: 2em;
+            padding: 1em;
+            color: var(--complem-color);
+            transition: 0.5s 0s ease-in-out;
+            background-color: var(--triad-color);
+            box-shadow: 4px 2px 25px 4px black;
+        }
+        
+        .navBtn:hover,
+        .navBtn:focus {
+            transform: scale(1.2);
+            padding: 0.6em;
+            transition: 0.3s 0s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        .shrinkedNavBtn {
+            animation: shrink-nav-button 2s ease-in-out forwards;
+        }
+        /*========================MAIN CONTENT=======================*/
+        
+        #greetings-text {
+            /* Zawijanie tekstu w boxie */
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            min-width: 50%;
+            min-height: 30%;
+            padding: 1em;
+            left: 25%;
+            align-items: center;
+            top: 30%;
+            width: 50%;
+            -webkit-box-shadow: 4px 7px 28px 14px rgba(0, 0, 0, 0.68);
+            -moz-box-shadow: 4px 7px 28px 14px rgba(0, 0, 0, 0.68);
+            box-shadow: 4px 2px 25px 4px black;
+        }
+        
+        #greetings-text h1 {
+            display: flex;
+            text-align: center;
+        }
+        
+        #greetings-text h3 {
+            display: flex;
+            text-align: center;
+        }
+        
+        #greetings-text a {
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+        }
+        
+        #separate-play {
+            width: 100%;
+            height: 30%;
+            background-color: var(--main-backg-fill);
+            z-index: 1;
+            position: absolute;
+            bottom: auto;
+            box-shadow: 11px 1px 10px 0 var(--main-backg-color);
+        }
+        /*  
+        ===============
+           findMeBar
+        ===============
+    */
+        
+        #findMe-bar {
+            z-index: 2;
+            position: fixed;
+            height: 10%;
+            top: 40%;
+            width: 2%;
+            background-color: var(--triad-color);
+            display: flex;
+            color: white;
+            background-color: var(--triad-color);
+            box-shadow: 4px 2px 25px 4px black;
+        }
+        /*
+        =============
+          Lang shift
+        =============
+    */
+        
+        #language-polish,
+        #language-english {
+            width: 100%;
+        }
+        
+        .lang-button button {
+            width: 5em;
+            margin-left: 3%;
+            background-color: var(--triad-color);
+            box-shadow: 4px 2px 25px 4px black;
+            color: var(--complem-color);
+            font-weight: 900;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s 0.1s ease-in-out;
+        }
+        
+        #language-english button:hover {
+            background-color: red;
+            color: blue;
+            transform: scale(1.1);
+        }
+        
+        #language-polish>button:hover {
+            background-color: white;
+            color: red;
+            transform: scale(1.1);
+        }
+        /* 
+       ================
+          # SITE 2 #
+        ===============
+    */
+        
+        #site-2 {
+            display: flex;
+            max-width: 100%;
+            flex-direction: column;
+            align-items: end
+        }
+        
+        .personal-description {
+            background-color: yellow;
+            height: 20em;
+            border: 1px black solid;
+        }
+        
+        .advert-window {
+            background-color: blue;
+            border: black 1p solid;
+            height: 10em;
+        }
+        /* ================
+        Keyframes-List
+        ===============
+    */
