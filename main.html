@@ -7,10 +7,7 @@
     <meta name='author' content='Szymon Szpot'>
     <link rel="stylesheet" href="mian_css/style.css" type='text/css'>
     <link rel="stylesheet" href="mian_css/fontello-menu/css/fontello.css" type='text/css'>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet " href="mian_css/fontello-side-menu/css/fontello.css " type='text/css'>
 
 
@@ -20,79 +17,150 @@
 
 <body>
     <div class='wrapper'>
-        <div id = 'findMe-bar'>@</div>
-        
-            <div id='site-1' class='background-images'></div>
-            <header>    
-                <div id='logo'>
-                    <noscript>Wygląda na to, że Twoja przeglądarka blokuje Javascript. Niektóre elementy strony mogą być niedostępne.</noscript>
-                    <img src='mian_css/logo1.png' alt='Logo Pogotowie Muzyczne'>
-                </div>
-                    <nav id= 'nav' class= 'basic-nav'>
-                        <ul>   
-                            <li><a class='navBtn' href='#site-1'>Home</a></li>
-                            <li><a class='navBtn' href='#site-2'>AboutUs</a></li>
-                            <li><a class='navBtn' href='#site-3'>WatchUs</a></li>
-                            <li><a class='navBtn' href='#site-4'>ListenUs</a></li>
-                            <li><a class='navBtn' href='#site-5'>ContactMe</a></li>
-                            <div id='hamburger'>
-                                <div class='burger-border'></div>
-                                <div class='burger-border'></div>
-                                <div class='burger-border'></div>
-                            </div>
-                            <ul>
-                    </nav>
-            </header>
-        <div id = 'language-polish' class='lang-button'>
-            <label for='polish-shift' name='polish-shift'></label>
-            <button tabindex= '1' type='submit' id='polish-shift' content='polish'>Polski</button>
+        <!--Bar navigates to social media sources-->
+        <div id='findMe-bar'>@</div>
+        <div id='lang-shifters'>
+            <div id='language-polish' class='lang-button'>
+                <label for='polish-shift' name='polish-shift'></label>
+                <button tabindex='1' type='submit' id='polish-shift' content='polish'>Polski</button>
+            </div>
+            <div id='language-english' class='lang-button'>
+                <label for='english-shift' name='english-shift' content='english-shift'></label>
+                <button tabindex='2' id='english-shift' type='submit' content='polish'>English</button>
+            </div>
         </div>
-        <div id = 'language-english' class='lang-button'>
-            <label for='english-shift' name='english-shift' content='english-shift'></label>
-            <button tabindex='2' id ='english-shift' type='submit' content='polish'>English</button>
-        </div>
-            
-        <div id='greetings-text'>
-            <h1>Lorem ipsum dolor sit amet, consectetur.</h1><h3 title='Zobacz, kim jesteśmy ;)'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a arcu sodales, suscipit est a, gravida enim</h3><a href='#site-2'>Click to get more</a>
-        </div>
-        
-            
-        </main>
-            
-          
-                
-                <!---->
-                 
-            
+        <div id='site-1' class='background-images'></div>
+        <header>
+            <div id='logo'>
+                <noscript>Wygląda na to, że Twoja przeglądarka blokuje Javascript. Niektóre elementy strony mogą być niedostępne.</noscript>
+                <img src='mian_css/logo1.png' alt='Logo Pogotowie Muzyczne'>
+            </div>
+            <nav id='nav' class='basic-nav'>
+                <ul>
+                    <li><a class='navBtn' href='#site-1'>Home</a></li>
+                    <li><a class='navBtn' href='#site-2'>AboutUs</a></li>
+                    <li><a class='navBtn' href='#site-3'>WatchUs</a></li>
+                    <li><a class='navBtn' href='#site-4'>ListenUs</a></li>
+                    <li><a class='navBtn' href='#site-5'>ContactMe</a></li>
+                    <ul>
+            </nav>
         </header>
-        <!--Bar navigates to social media sources>
-        
+        <main>
+            <div id='greetings-text'>
+                <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+                <h3 title='Zobacz, kim jesteśmy ;)'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a arcu sodales, suscipit est a, gravida enim</h3><a href='#site-2'>Click to get more</a>
+            </div>
+        </main>
+
+
+        <div class='between-sites-break' id='break-1'></div>
+
+
         <!--AboutMe Site-->
         <section>
-            <h1>Kim jesteśmy?</h1>
-            <div id= 'site-2' class = 'background-images'>
-            <div class='advert-window'></div>
-                <div class='personal-description' id='person1'></div>
-                <div class='personal-description' id='person2'></div>
-                <div class='advert-window'></div>
-            </div>
-            
-            
+            <div id='site-2' class='background-images'>
+                <div id='grid-box-site-2'>
+                    <div class='advert-window'></div>
+                    <article class='personal-description' id='person1'></article>
+                    <article class='personal-description' id='person2'></article>
+                    <div class='advert-window'></div>
+                </div>
+                <div>
         </section>
+
+
+        <div class='between-sites-break' id='break-2'></div>
         <section>
-            <div id='site-3' class='background-images'></div>
+            <div id='site-3' class='background-images'>
+                <section class='cards'>
+                    <section id='info-1'>
+                        <h1>Title</h1>
+                        <p>We are able to cover your wedding</p>
+                        <a href='#'>Listen what</a>
+                    </section>
+                    <article>
+                        <img class='media-pic' id='pic1'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic2'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic3'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic4'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic5'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic6'>
+                    </article>
+                    <section id='info-2'>
+                        <h1>According to nature...</h1>
+                        <p>...at open-air...</p>
+                        <a href='#'>Listen</a>
+                    </section>
+                    <article>
+                        <img class='media-pic' id='pic7'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic8'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic9'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic10'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic11'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic12'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic13'>
+                    </article>
+                    <section id='info-3'>
+                        <h1>Ogień w szopie!</h1>
+                        <p>..To znaczy, w knajpie :) </p>
+                        <a href=#>Listen</a>
+                    </section>
+                    <article>
+                        <img class='media-pic' id='pic14'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic15'>
+                    </article>
+                    <article>
+                        <img class='media-pic' id='pic17'>
+                    </article>
+                    <section id='info-4'>
+                        <h1>But we don't care.</h1>
+                        <p>We can play just everywhere</p>
+                        <a href='#'>Listen</a>
+                    </section>
+
+                </section>
+            </div>
         </section>
+
+
+        <div class='between-sites-break' id='break-3'></div>
+
+
         <section>
             <div id='site-4' class='background-images'></div>
-        </section>         
+        </section>
         <section>
             <div id='site-5' class='background-images'></div>
         </section>
 
-    </div>
-    <script src='main_js/hide_nav_scroll.js'>
-    </script>
-    
+        </div>
+        <script src='main_js/hide_nav_scroll.js'>
+        </script>
+
 </body>
 
 </html>
